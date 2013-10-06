@@ -1,0 +1,17 @@
+bin/
+gen/
+.settings/
+.classpath
+.project
+proguard.cfg
+lint.xml
+bin/
+gen/
+.classpath
+.project
+.settings/
+bin/
+gen/
+.classpath
+.project
+.settings/
