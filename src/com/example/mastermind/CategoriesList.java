@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.parse.Parse;
-import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
+import com.parse.ParseException;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -20,6 +20,7 @@ public class CategoriesList extends ListActivity {
 	private ArrayList<category> categories;
 	private ListView categoriesListView;
 	private categoryAdaptor categoryAdap; 
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -29,16 +30,8 @@ public class CategoriesList extends ListActivity {
 		
 		CategoryAsyncTask asynTask = new CategoryAsyncTask();
 		asynTask.execute();
-		 
 		
-//		int category_length = fillCategoriesList();
 		categoriesListView = (ListView) findViewById(android.R.id.list);
-//		if(category_length > 0)
-		{
-//			categoryAdap = new categoryAdaptor(this, android.R.layout.simple_expandable_list_item_1,R.id.text1,categories);
-//			categoriesListView.setAdapter(categoryAdap);
-			//setListAdapter(new ArrayAdapter<category>(this, android.R.layout.simple_list_item_1, R.id.textView1, categories));
-		}
 	}
 
 	@Override
@@ -48,16 +41,7 @@ public class CategoriesList extends ListActivity {
 		return true;
 	}
 	
-//	private int fillCategoriesList(){
-//		categories = new ArrayList<category>();
-//		categories.add(new category("Maths"));
-//		categories.add(new category("Science"));
-//		categories.add(new category("Fiction"));
-//		categories.add(new category("Literature"));
-//		categories.add(new category("Art"));
-//		categories.add(new category("General Knowledge"));
-//		return categories.size();
-//	}
+
 	
 	class CategoryAsyncTask extends AsyncTask<Void, Void, Void>
 	{
@@ -82,7 +66,7 @@ public class CategoriesList extends ListActivity {
 			} catch (ParseException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-			}
+			} 
 			
 			 categories = new ArrayList<category>();
 			
@@ -108,10 +92,9 @@ public class CategoriesList extends ListActivity {
 	
 	private void loadAdapter()
 	{
-		categoryAdap = new categoryAdaptor(this, android.R.layout.simple_expandable_list_item_1,R.id.text1,categories);
+		categoryAdap = new categoryAdaptor(this, android.R.layout.simple_expandable_list_item_1,R.id.title,categories);
 		categoriesListView.setAdapter(categoryAdap);
 
 	}
-	
 
 }

@@ -29,7 +29,7 @@ public class categoryAdaptor extends ArrayAdapter<category>{
 				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		View row = inflater.inflate(R.layout.category_item, parent,false);
 		
-		TextView tv = (TextView) row.findViewById(R.id.text1);
+		TextView tv = (TextView) row.findViewById(R.id.title);
 		tv.setText(categories.get(position).getCategoryName());
 
 		return row;

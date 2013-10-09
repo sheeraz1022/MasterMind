@@ -6,7 +6,6 @@ public class category {
 	//category constructors
 	public category(String name){
 		this.name = name;
-		
 	}
 	//getter setter for category name
 	public void setCategoryName(String name){

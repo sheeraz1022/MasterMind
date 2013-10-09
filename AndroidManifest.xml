@@ -23,10 +23,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.mastermind.CategoriesList" >
+            android:name="com.example.mastermind.CategoriesList"
+            android:label="Categories" >
+        </activity>
+        <activity
+            android:name="com.example.mastermind.Login"
+            android:label="@string/title_activity_login" >
         </activity>
     </application>
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    
 </manifest>
