@@ -12,7 +12,9 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.app.ListActivity;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.view.Menu;
+import android.view.View;
 import android.widget.ListView;
 
 public class CategoriesList extends ListActivity {
@@ -35,13 +37,27 @@ public class CategoriesList extends ListActivity {
 	}
 
 	@Override
+	protected void onListItemClick(ListView l, View v, int position, long id) {
+ 
+		//get selected items
+		category selectedCategory = (category) categoryAdap.getItem(position);
+		
+		Intent viewQuestion = new Intent(this,Question.class);
+		viewQuestion.putExtra("category",selectedCategory);
+        startActivity(viewQuestion);
+        
+        overridePendingTransition( R.anim.slide_in_left, R.anim.slide_out_left );
+ 
+	}
+	
+	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.categories_list, menu);
 		return true;
 	}
-	
 
+  
 	
 	class CategoryAsyncTask extends AsyncTask<Void, Void, Void>
 	{

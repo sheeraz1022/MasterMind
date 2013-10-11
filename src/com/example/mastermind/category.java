@@ -1,6 +1,10 @@
 package com.example.mastermind;
 
-public class category {
+import java.io.Serializable;
+
+public class category implements Serializable{
+	
+	private static final long serialVersionUID = 5824834976687841691L;
 	private String name;
 	
 	//category constructors

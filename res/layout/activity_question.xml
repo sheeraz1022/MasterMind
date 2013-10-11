@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cell_background"
+    android:orientation="vertical"
+    tools:context=".Question" >
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="20dp"
+         android:layout_marginRight="20dp"
+        android:ems="20"
+        android:text="Question" />
+    
+        <Button
+        android:id="@+id/optionA"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/button_shape"
+        android:text="A. " />
+        
+        <Button
+        android:id="@+id/optionB"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/button_shape"
+        android:text="B. " />
+        
+        <Button
+        android:id="@+id/optionC"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/button_shape"
+        android:text="C. " />
+        
+        <Button
+        android:id="@+id/optionD"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/button_shape"
+        android:text="D. " />
+        
+        <Button
+        android:id="@+id/submit"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="200dp"
+        android:background="@drawable/button_shape"
+        android:text="Next " />
+
+</LinearLayout>
